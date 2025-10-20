@@ -11,57 +11,57 @@ html {
     box-sizing: border-box;
 }
 
+/* Mobile-first responsive design */
+
 #diagnolDiv {
     position: relative;
     top: 0;
     left: 0;
-    height: 679px;
+    height: 80vh;
     width: 100%;
     clip-path: polygon(0 0, 100% 0, 100% 35%, 0 100%);
     background-color: #008dbd;
+    z-index: 0;
 }
 
 #header {
-    position: absolute;
     height: 100%;
-    top: 0;
-    left: 0;
+    text-align: center;
+    color: white;
 }
 
 #header img {
-    width: 35vw;
-    height: 634px;
-    position: absolute;
-    left: 20px;
+    position: relative;
+    width: 90%;
+    height: auto;
+    max-width: 350px;
+    border-radius: 10px;
     object-fit: cover;
+    margin-top: -70vh;
+    z-index: 1;
 }
 
-#header p {
-    width: 35vw;
-    position: absolute;
-    color: white;
-    bottom: 0;
-    left: 25px;
-    font-size: 47px;
+#header h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    margin-top: -7vh;
 }
 
 #aboutMe {
-    position: absolute;
-    left: calc(35vw + 20px);
-    top: calc(15px + 63.4px);
-    height: 507px;
-    width: calc(95vw - calc(35vw + 20px));
     box-shadow: 0 4px 3px gray, 0 5px 14px gray;
     background-color: white;
     padding: 10px 18px 0 18px;
     display: grid;
     grid-template-rows: 120px 1fr 50px;
     align-content: space-between;
+    margin: 20px;
+    border-radius: 10px;
 }
 
 #aboutMe p {
-    line-height: 2;
-    font-size: 18px;
+    line-height: 1.7;
+    font-size: 1rem;
 }
 
 #aboutMe h1 {
@@ -69,175 +69,172 @@ html {
     text-align: left;
 }
 
-#aboutMe #icons {
+#aboutMe .icons {
     display: grid;
     grid-template-columns: 50px 50px 50px;
     justify-content: end;
     gap: 10px;
-}
-
-#icons>i {
-    font-size: 35px;
+    font-size: 2rem;
 }
 
 
-#card {
-    height: 400px;
+.card {
     display: grid;
-    margin: 55px;
-    grid-template-rows: 200px 30px 70px;
+    margin: 25px 15px 50px 15px;
+    grid-template-rows: 200px auto auto;
     box-shadow: 0 4px 3px gray, 0 5px 14px gray;
     gap: 10px;
+    overflow: hidden;
 }
 
 #work {
-    margin-top: 50px;
-    text-align: left;
+    text-align: center;
 }
 
-#projectImg {
+.projectImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-#projectName {
+.projectName {
     display: grid;
-    grid-template-columns: 212px 30px 30px;
-    justify-content: start;
+    grid-template-columns: 0.8fr auto auto;
+    justify-content: space-between;
     align-items: center;
-    padding-left: 22px;
+    padding: 10px;
     font-weight: bold;
     font-size: 20px;
     gap: 5px;
 }
 
-#projectName>i {
+.projectName i {
     font-size: 25px;
 }
 
-#projDesc {
-    display: grid;
-    justify-content: start;
-    align-items: center;
-    padding-left: 12px;
+.projDesc {
+    padding: 0 15px 15px 15px;
 }
 
 #footer {
     background-color: #008dbd;
     display: grid;
-    grid-template-columns: 0.7fr 1fr;
-    height: 600px;
-    padding-top: 50px;
-    align-items: start;
+    grid-template-columns: 1fr;
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+    gap: 20px;
+    width: 100%;
 }
 
 #footer #title {
-    text-align: left;
     color: white;
-    font-size: 35px;
+    font-size: 2.3rem;
+    margin-bottom: 15px;
 }
 
 #footer p {
     color: white;
-    font-size: 20px;
+    font-size: 1.2rem;
+    margin: 10px 0;
 }
 
-#footer  #icons {
+#footer .icons {
+    margin-top: 20px;
     display: grid;
-    grid-template-columns: 30px 30px 30px;
-    height: 40px;
-    justify-items: start;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: start;
     gap: 20px;
-}
-
-#footer #title {
-    white-space: nowrap;
-}
-
-.col-5 > p {
-    white-space: nowrap;
-}
-#footer > #icons > i {
-    font-size: 35px;
+    font-size: 2.3rem;
 }
 
 #footer img {
     width: 100%;
-    height: 500px;
+    height: auto;
     object-fit: cover;
 }
 
-[class*="col-"] {
-    width: 100%;
-}
 
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-@media only screen and (min-width: 768px) {
-
-    /* For Desktop */
-    .col-1 {
-        width: 8.33%;
+/* For Desktop */
+@media (min-width: 1024px) {
+    #diagnolDiv {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 80vh;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 35%, 0 100%);
+        background-color: #008dbd;
+        z-index: 0;
     }
 
-    .col-2 {
-        width: 16.66%;
+    #header {
+        text-align: left;
+        padding-left: 2vw;
+        margin-bottom: 20vh;
     }
 
-    .col-3 {
-        width: 25%;
+    #header img {
+        position: relative;
+        height: 90vh;
+        max-width: 350px;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-top: -75vh;
+        width: 60%;
+        z-index: 1;
     }
 
-    .col-4 {
-        width: 33.33%;
+    #aboutMe {
+        position: relative;
+        margin-top: -100vh;
+        left: 28vw;
+        height: 70vh;
+        width: 65vw;
+        top: 0vh;
     }
 
-    .col-5 {
-        width: 41.66%;
+    #work {
+        text-align: left;
+        margin-top: 30vh;
+        padding-left: 2vw;
+        font-size: 3rem;
     }
 
-    .col-6 {
-        width: 50%;
+    .row:nth-child(4),
+    .row:nth-child(5) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
     }
 
-    .col-7 {
-        width: 58.33%;
-    }
-
-    .col-8 {
-        width: 66.66%;
-    }
-
-    .col-9 {
-        width: 75%;
-    }
-
-    .col-10 {
-        width: 83.33%;
-    }
-
-    .col-11 {
-        width: 91.66%;
-    }
-
-    .col-12 {
+    .card col-3 {
+        height: 100%;
         width: 100%;
     }
 
-    [class*="col-"] {
-        float: left;
-        padding: 15px;
+    #footer {
+        height: 55.5vh;
     }
 
-    .row::after {
-        content: "";
-        clear: both;
-        display: table;
+    #footer {
+        padding-left: 10px;
+    }
+
+    #footer {
+        display: grid;
+        grid-template-columns: 41.66% 58.33%;
+        align-items: start;
+        text-align: left;
+        gap: 0;
+    }
+
+    #footer img {
+        width: 100%;
+        height: 35%;
+        object-fit: cover;
     }
 }
